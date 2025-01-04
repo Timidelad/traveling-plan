@@ -4,8 +4,8 @@ import { MdDeleteForever } from "react-icons/md";
 
 function Body({ lists, updateCheckbox, deleteItem, saveTodo, editIt }) {
     return (
-        <div className=' text-black fixed top-[172px] bottom-[96px] left-0 right-0 overflow-y-auto pt-2 mx-[8px]'>
-            <ul>{lists.map((list) => (
+        <div className=' text-black fixed top-[172px] bottom-[96px] left-0 right-0 overflow-y-auto py-2 md:py-5 mx-[8px] md:mx-[64px] lg:mx-[120px]'>
+            <ul className='grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6'>{lists.map((list) => (
                 <li key={list.id} className="flex items-center mb-2 gap-2 w-full">
                     <input
                         type="checkbox"

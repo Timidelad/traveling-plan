@@ -2,12 +2,18 @@ import React from 'react'
 import Body from './Body'
 import Header from './Header'
 import Footer from './Footer'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Testing from './Testing'
 
 function App() {
-  const [lists, setLists] = useState([]);
+  const [lists, setLists] = useState(() => {
+    const savedItems = localStorage.getItem('lists');
+    return savedItems ? JSON.parse(savedItems) : [];
+  });
 
+  useEffect(() => {
+    localStorage.setItem('lists', JSON.stringify(lists));
+  }, [lists]);
   //function to add list
   function updateList(x) {
     let myList = {
@@ -60,6 +66,11 @@ function App() {
     }
   }
 
+  //function to clear the list
+  function clearList() {
+    setLists([])
+  }
+
   return (
     <div className='font-Nunito'>
       <Header updateList={updateList} />
@@ -69,7 +80,9 @@ function App() {
         deleteItem={deleteItem}
         editIt={editIt}
         saveTodo={saveTodo} />
-      <Footer lists={lists} />
+      <Footer
+        lists={lists}
+        clearList={clearList} />
     </div>
   )
 }
