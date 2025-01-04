@@ -3,7 +3,6 @@ import Body from './Body'
 import Header from './Header'
 import Footer from './Footer'
 import { useState, useEffect } from 'react'
-import Testing from './Testing'
 
 function App() {
   const [lists, setLists] = useState(() => {
