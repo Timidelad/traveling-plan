@@ -10,7 +10,11 @@ export default {
         Nunito: ['Nunito', 'serif']
       },
       colors: {
-        bannerColor: '#15253F'
+        bannerColor: '#15253F',
+        footerColor: '#212526',
+        deleteColor: '#EF0D49',
+        checkboxCol: '#004CFC',
+        textBg: '#E9E9E9'
       }
     },
   },

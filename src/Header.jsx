@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 function Header({ updateList }) {
     return (
-        <div className='flex flex-col'>
+        <div className='flex flex-col fixed top-0 left-0 w-full z-10'>
             <Banner />
             <InputHead updateList={updateList} />
         </div>
