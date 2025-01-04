@@ -27,4 +27,4 @@ A simple and intuitive web application designed to help users create a checklist
 
 
 ## DEMO
-Check out the project live ()
+Check out the project live (traveling-plan-tm.vercel.app)
